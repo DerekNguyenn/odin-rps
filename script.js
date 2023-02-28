@@ -26,7 +26,7 @@ function validateInput(str) {
     } else if (!choices.includes(formatString)) {
       console.log("Player gave an invalid choice.");
     } else {
-      return formatString
+      return formatString;
     }
   }
 
@@ -46,6 +46,6 @@ function compareSelection(playerSelection, computerSelection) {
 
 if (choices.includes(playerChoice)) {
     compareSelection(playerChoice, computerChoice);
-    console.log(`Player Choice: ${playerChoice}`)
-    console.log(`PC Choice: ${computerChoice}`)
+    console.log(`Player Choice: ${playerChoice}`);
+    console.log(`PC Choice: ${computerChoice}`);
   }
