@@ -12,9 +12,22 @@ function getComputerChoice() {
     }
 }
 
-let choices = ["Rock", "Paper", "Scissors"];
-let computerChoice = getComputerChoice();
-let playerChoice = prompt("Rock, Paper, or Scissors?");
+const choices = ["Rock", "Paper", "Scissors"];
+let promptPlayer = prompt("Rock, Paper, or Scissor")
+let playerChoice = validateInput(promptPlayer);
+
+function validateInput(str) {
+    let formatString = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    if (str === "") {
+      console.log("Player did not decide on a choice.");
+    } else if (!str) {
+      console.log("Game has been canceled.");
+    } else if (!choices.includes(formatString)) {
+      console.log("Player gave an invalid choice.");
+    } else {
+      return formatString
+    }
+  }
 
 function compareSelection(playerSelection, computerSelection) {
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
