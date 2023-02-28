@@ -17,7 +17,7 @@ let promptPlayer = prompt("Rock, Paper, or Scissor")
 let playerChoice = validateInput(promptPlayer);
 let computerChoice = getComputerChoice();
 
-function formattedString(str) {
+function formatString(str) {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
@@ -26,10 +26,10 @@ function validateInput(str) {
       console.log("Player did not decide on a choice.");
     } else if (!str) {
       console.log("Game has been canceled.");
-    } else if (!choices.includes(formattedString(str))) {
+    } else if (!choices.includes(formatString(str))) {
       console.log("Player gave an invalid choice.");
     } else {
-      return formattedString(str);
+      return formatString(str);
     }
   }
 
