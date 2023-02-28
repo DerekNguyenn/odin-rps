@@ -14,3 +14,17 @@ function getComputerChoice() {
 
 let computerChoice = getComputerChoice();
 let playerChoice = prompt("Rock, Paper, or Scissors?");
+
+function compareSelection(playerSelection, computerSelection) {
+    if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        console.log("Player win");
+    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        console.log("Player win");
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        console.log("Player win");
+    } else if (playerSelection == computerSelection) {
+        console.log("Tie");
+    } else {
+        console.log("PC win");
+    }
+}
