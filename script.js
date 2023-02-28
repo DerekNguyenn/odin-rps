@@ -12,6 +12,7 @@ function getComputerChoice() {
     }
 }
 
+let choices = ["Rock", "Paper", "Scissors"];
 let computerChoice = getComputerChoice();
 let playerChoice = prompt("Rock, Paper, or Scissors?");
 
