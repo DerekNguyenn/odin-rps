@@ -15,6 +15,7 @@ function getComputerChoice() {
 const choices = ["Rock", "Paper", "Scissors"];
 let promptPlayer = prompt("Rock, Paper, or Scissor")
 let playerChoice = validateInput(promptPlayer);
+let computerChoice = getComputerChoice();
 
 function validateInput(str) {
     let formatString = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -42,3 +43,9 @@ function compareSelection(playerSelection, computerSelection) {
         console.log("PC win");
     }
 }
+
+if (choices.includes(playerChoice)) {
+    compareSelection(playerChoice, computerChoice);
+    console.log(`Player Choice: ${playerChoice}`)
+    console.log(`PC Choice: ${computerChoice}`)
+  }
