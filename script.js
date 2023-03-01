@@ -4,34 +4,34 @@ function getComputerChoice() {
 
     switch (computerChoice) {
         case 1:
-            return("Rock");
+            return ("Rock");
         case 2:
-            return("Paper");
+            return ("Paper");
         case 3:
-            return("Scissors");
+            return ("Scissors");
     }
 }
 
 const choices = ["Rock", "Paper", "Scissors"];
 let promptPlayer = prompt("Rock, Paper, or Scissor")
-let playerChoice = validateInput(promptPlayer);
-let computerChoice = getComputerChoice();
+const playerChoice = validateInput(promptPlayer);
+const computerChoice = getComputerChoice();
 
 function formatString(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 function validateInput(str) {
     if (str === "") {
-      console.log("Player did not decide on a choice.");
+        console.log("Player did not decide on a choice.");
     } else if (!str) {
-      console.log("Game has been canceled.");
+        console.log("Game has been canceled.");
     } else if (!choices.includes(formatString(str))) {
-      console.log("Player gave an invalid choice.");
+        console.log("Player gave an invalid choice.");
     } else {
-      return formatString(str);
+        return formatString(str);
     }
-  }
+}
 
 function playRound(playerSelection, computerSelection) {
     const playerWin = "Player win";
@@ -52,7 +52,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 if (choices.includes(playerChoice)) {
-    playRound(playerChoice, computerChoice);
+    let result = playRound(playerChoice, computerChoice);
+    console.log(`Result: ${result}`);
     console.log(`Player Choice: ${playerChoice}`);
     console.log(`PC Choice: ${computerChoice}`);
-  }
+}
