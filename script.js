@@ -20,6 +20,11 @@ let playerWins = 0;
 let computerWins = 0;
 let ties = 0;
 
+// Game outcomes
+let playerWin;
+let computerWin;
+let tie;
+
 function formatString(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
