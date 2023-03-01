@@ -1,16 +1,3 @@
-function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3) + 1
-
-    switch (computerChoice) {
-        case 1:
-            return ("Rock");
-        case 2:
-            return ("Paper");
-        case 3:
-            return ("Scissors");
-    }
-}
-
 const rounds = prompt("How many rounds would you like to play?", 5);
 const choices = ["Rock", "Paper", "Scissors"];
 
@@ -24,15 +11,28 @@ const playerWin = "Player win";
 const computerWin = "Computer win";
 const tie = "Tie";
 
+function getComputerChoice() {
+    let computerChoice = Math.floor(Math.random() * 3) + 1
+
+    switch (computerChoice) {
+        case 1:
+            return ("Rock");
+        case 2:
+            return ("Paper");
+        case 3:
+            return ("Scissors");
+    }
+}
+
 function validateInput(str) {
     let formattedString = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 
     if (str === "") {
-        console.log("Player did not decide on a choice.");
+        console.log("Player did not decide on a choice. Skipping game.");
     } else if (!str) {
-        console.log("Game has been canceled.");
+        console.log("Game has been canceled. Skipping game.");
     } else if (!choices.includes(formattedString)) {
-        console.log("Player gave an invalid choice.");
+        console.log("Player gave an invalid choice. Skipping game.");
     } else {
         return formattedString;
     }
