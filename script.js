@@ -14,9 +14,11 @@ function getComputerChoice() {
 
 const rounds = prompt("How many rounds would you like to play?", 5);
 const choices = ["Rock", "Paper", "Scissors"];
-const promptPlayer = prompt("Rock, Paper, or Scissor")
-const playerChoice = validateInput(promptPlayer);
-const computerChoice = getComputerChoice();
+
+// Game scores
+let playerWins = 0;
+let computerWins = 0;
+let ties = 0;
 
 function formatString(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
