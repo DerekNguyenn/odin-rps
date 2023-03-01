@@ -12,8 +12,9 @@ function getComputerChoice() {
     }
 }
 
+const rounds = prompt("How many rounds would you like to play?", 5);
 const choices = ["Rock", "Paper", "Scissors"];
-let promptPlayer = prompt("Rock, Paper, or Scissor")
+const promptPlayer = prompt("Rock, Paper, or Scissor")
 const playerChoice = validateInput(promptPlayer);
 const computerChoice = getComputerChoice();
 
