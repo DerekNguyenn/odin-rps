@@ -42,20 +42,18 @@ function validateInput(str) {
 }
 
 function playRound(playerSelection, computerSelection) {
-    const playerWin = "Player win";
-    const computerWin = "Cmputer win";
-    const tie = "Tie";
+    let matchResult;
 
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        return playerWin;
+        matchResult = playerWin;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        return playerWin;
+        matchResult = playerWin;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        return playerWin;
+        matchResult = playerWin;
     } else if (playerSelection == computerSelection) {
-        return tie;
+        matchResult = tie;
     } else {
-        return computerWin;
+        matchResult = computerWin;
     }
 }
 
