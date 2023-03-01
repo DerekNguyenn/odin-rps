@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3) + 1
 
@@ -61,7 +60,14 @@ function playRound(playerSelection, computerSelection) {
     console.log(`PC Choice: ${computerSelection}`);
     console.log(`Result: ${matchResult}`);
 
+    recordGameResults(matchResult);
     return matchResult;
+}
+
+function recordGameResults(result) {
+    if (result == playerWin) { playerWins++ }
+    if (result == computerWin) { computerWins++ }
+    if (result == tie) { ties++ }
 }
 
 function printOverallResult(round) {
