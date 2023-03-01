@@ -16,11 +16,11 @@ function getComputerChoice() {
 
     switch (computerChoice) {
         case 1:
-            return ("Rock");
+            return choices[0];
         case 2:
-            return ("Paper");
+            return choices[1];
         case 3:
-            return ("Scissors");
+            return choices[2];
     }
 }
 
@@ -58,7 +58,6 @@ function playRound(playerSelection, computerSelection) {
     console.log(`PC Choice: ${computerSelection}`);
     console.log(`Result: ${matchResult}`);
 
-    recordGameResults(matchResult);
     return matchResult;
 }
 
@@ -78,12 +77,13 @@ function printOverallResult(round) {
 
 function game(rounds) {
     for (let i = 0; i < rounds; i++) {
-        let promptPlayer = prompt("Rock, Paper, or Scissor");
+        let promptPlayer = prompt("Rock, Paper, or Scissors");
         let computerChoice = getComputerChoice();
         let playerChoice = validateInput(promptPlayer);
 
         if (choices.includes(playerChoice)) {
-            playRound(playerChoice, computerChoice);
+            result = playRound(playerChoice, computerChoice);
+            recordGameResults(result);
         }
     }
     printOverallResult(rounds);
