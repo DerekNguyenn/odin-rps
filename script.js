@@ -24,19 +24,17 @@ const playerWin = "Player win";
 const computerWin = "Computer win";
 const tie = "Tie";
 
-function formatString(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-}
-
 function validateInput(str) {
+    let formattedString = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
     if (str === "") {
         console.log("Player did not decide on a choice.");
     } else if (!str) {
         console.log("Game has been canceled.");
-    } else if (!choices.includes(formatString(str))) {
+    } else if (!choices.includes(formattedString)) {
         console.log("Player gave an invalid choice.");
     } else {
-        return formatString(str);
+        return formattedString;
     }
 }
 
@@ -83,7 +81,7 @@ function game(rounds) {
         let promptPlayer = prompt("Rock, Paper, or Scissor");
         let computerChoice = getComputerChoice();
         let playerChoice = validateInput(promptPlayer);
-        
+
         if (choices.includes(playerChoice)) {
             playRound(playerChoice, computerChoice);
         }
