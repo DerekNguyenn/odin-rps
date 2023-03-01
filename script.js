@@ -21,9 +21,9 @@ let computerWins = 0;
 let ties = 0;
 
 // Game outcomes
-let playerWin;
-let computerWin;
-let tie;
+const playerWin = "Player win";
+const computerWin = "Computer win";
+const tie = "Tie";
 
 function formatString(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
