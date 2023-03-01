@@ -70,9 +70,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function recordGameResults(result) {
-    if (result == playerWin) { playerWins++ }
-    if (result == computerWin) { computerWins++ }
-    if (result == tie) { ties++ }
+    switch (result) {
+        case playerWin: playerWins++; break;
+        case computerWin: computerWins++; break;
+        default: ties++
+    }
 }
 
 function printOverallResult(round) {
