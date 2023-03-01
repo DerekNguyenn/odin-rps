@@ -33,7 +33,7 @@ function validateInput(str) {
     }
   }
 
-function compareSelection(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
         console.log("Player win");
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
@@ -48,7 +48,7 @@ function compareSelection(playerSelection, computerSelection) {
 }
 
 if (choices.includes(playerChoice)) {
-    compareSelection(playerChoice, computerChoice);
+    playRound(playerChoice, computerChoice);
     console.log(`Player Choice: ${playerChoice}`);
     console.log(`PC Choice: ${computerChoice}`);
   }
