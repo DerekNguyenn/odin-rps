@@ -55,11 +55,18 @@ function playRound(playerSelection, computerSelection) {
     } else {
         matchResult = computerWin;
     }
+
+    // Results for a single match
+    console.log(`Player Choice: ${playerSelection}`);
+    console.log(`PC Choice: ${computerSelection}`);
+    console.log(`Result: ${matchResult}`);
+
+    return matchResult;
 }
 
-if (choices.includes(playerChoice)) {
-    let result = playRound(playerChoice, computerChoice);
-    console.log(`Result: ${result}`);
-    console.log(`Player Choice: ${playerChoice}`);
-    console.log(`PC Choice: ${computerChoice}`);
-}
+// if (choices.includes(playerChoice)) {
+//     let result = playRound(playerChoice, computerChoice);
+//     console.log(`Result: ${result}`);
+//     console.log(`Player Choice: ${playerChoice}`);
+//     console.log(`PC Choice: ${computerChoice}`);
+// }
