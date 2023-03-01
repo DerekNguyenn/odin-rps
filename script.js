@@ -72,9 +72,17 @@ function printOverallResult(round) {
     console.log(`Computer wins: ${computerWins}`);
 }
 
-// if (choices.includes(playerChoice)) {
-//     let result = playRound(playerChoice, computerChoice);
-//     console.log(`Result: ${result}`);
-//     console.log(`Player Choice: ${playerChoice}`);
-//     console.log(`PC Choice: ${computerChoice}`);
-// }
+function game(rounds) {
+    for (let i = 0; i < rounds; i++) {
+        let promptPlayer = prompt("Rock, Paper, or Scissor");
+        let computerChoice = getComputerChoice();
+        let playerChoice = validateInput(promptPlayer);
+        
+        if (choices.includes(playerChoice)) {
+            playRound(playerChoice, computerChoice);
+        }
+    }
+    printOverallResult(rounds);
+}
+
+game(rounds);
