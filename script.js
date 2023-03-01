@@ -77,7 +77,7 @@ function recordGameResults(result) {
     }
 }
 
-function printOverallResult(round) {
+function printEndResult(round) {
     console.log("[]=== MATCH RESULTS ===[]]");
     console.log(`Rounds played: ${round}`);
     console.log(`Ties: ${ties}`);
@@ -96,7 +96,7 @@ function game(rounds) {
             recordGameResults(result);
         }
     }
-    printOverallResult(rounds);
+    printEndResult(rounds);
 }
 
 game(rounds);
