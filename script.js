@@ -1,4 +1,12 @@
-const rounds = prompt("How many rounds would you like to play?", 5);
+let rounds;
+
+do {
+    rounds = parseInt(prompt("How many rounds would you like to play?", 5));
+    if (Number.isNaN(rounds)) {
+        console.log("Please enter a valid number.");
+    }
+} while (Number.isNaN(rounds));
+
 const choices = ["Rock", "Paper", "Scissors"];
 
 // Game scores
