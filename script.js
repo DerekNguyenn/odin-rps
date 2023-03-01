@@ -34,16 +34,20 @@ function validateInput(str) {
   }
 
 function playRound(playerSelection, computerSelection) {
+    const playerWin = "Player win";
+    const computerWin = "Cmputer win";
+    const tie = "Tie";
+
     if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        console.log("Player win");
+        return playerWin;
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        console.log("Player win");
+        return playerWin;
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        console.log("Player win");
+        return playerWin;
     } else if (playerSelection == computerSelection) {
-        console.log("Tie");
+        return tie;
     } else {
-        console.log("PC win");
+        return computerWin;
     }
 }
 
