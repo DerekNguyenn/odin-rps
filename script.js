@@ -64,6 +64,14 @@ function playRound(playerSelection, computerSelection) {
     return matchResult;
 }
 
+function printOverallResult(round) {
+    console.log("[]=== MATCH RESULTS ===[]]");
+    console.log(`Rounds played: ${round}`);
+    console.log(`Ties: ${ties}`);
+    console.log(`Player wins: ${playerWins}`);
+    console.log(`Computer wins: ${computerWins}`);
+}
+
 // if (choices.includes(playerChoice)) {
 //     let result = playRound(playerChoice, computerChoice);
 //     console.log(`Result: ${result}`);
